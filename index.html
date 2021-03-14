@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Calculate Your BMI </title>
+
+    <style>
+       
+        
+       header {
+       position: fixed;
+       left: 0;
+       width: 100%;
+       height: 100px;
+       background-color: #e48257;
+       color: white;
+       text-align: center;
+       margin-bottom: 10em;
+     }
+      
+      main {
+        position: relative;
+        padding: 5em;
+      }
+      
+       footer {
+       position: fixed;
+       left: 0;
+       bottom: 0;
+       width: 100%;
+       height: 100px;
+       background-color: #3a6351;
+       color: white;
+       text-align: left;
+     }
+     
+     .lab {
+         color: black;
+         background-color: white;
+         position: relative;
+     }
+
+     .container{
+         display: block;
+     }
+
+
+     .parg {
+     position: relative;
+     width: 40%;
+     float: right;  
+     margin: 2em;   }
+
+     .prom {
+     position: relative;
+     width: 40%;
+     float: left;
+     margin: 2em; 
+     }
+
+    
+    
+     p{
+         color:#393232 ;
+     }
+     
+
+
+     a:visited {
+     color: #e48257;
+     }
+
+
+    </style>
+
+</head>
+
+
+
+<body style="background-color: #f2edd7;">
+  <header>
+   <h1 style="color:#393232 ;"> Body Mass Index (BMI) Calculator </h1>
+
+  </header>
+
+
+
+  <main>
+
+      <h1 clss=lab>Class 1 Lab</h1>
+
+      
+<div class=container> 
+
+    <div class=parg>
+        <p> <b>Body mass index (BMI)</b> is a value derived from the mass (weight) and height of a person. The BMI is defined as the body mass divided by the square of the body height, and is expressed in units of kg/m2, resulting from mass in kilograms and height in metres.</p>
+        <p>The BMI is a convenient rule of thumb used to broadly categorize a person as underweight, normal weight, overweight, or obese based on tissue mass (muscle, fat, and bone) and height. Commonly accepted BMI ranges are:</p>
+            <ul> 
+            <li>underweight (under 18.5 kg/m2), </li>
+            <li>normal weight (18.5 to 25), </li>
+            <li>overweight (25 to 30), </li> 
+            <li>and obese (over 30).</li> 
+            </ul>
+    </div>
+        
+
+   
+   <div class=prom>
+    <p style="color: red; background-color: teal;">What is your name, for please? 😊</p>
+    <p style="color: yellow; background-color: tomato;">How old are you ?</p>
+    <p style="color: teal; background-color: yellowgreen;">How much your hight? add your hight in CM for please !</p> 
+    <p style="color: aqua; background-color: blue;">How much do you weigh? add your hight in KG for please !</p>
+   </div>
+
+</div>
+  
+ <script>
+        alert(" Hello Dear 😎 👋 ")
+        let username= prompt( "What is your name, for please? 😊")
+        console.log(username);
+        
+        alert("Hi  "+ username + "  😃")
+
+        let age= prompt("How old are you "+ username + " ?")
+        console.log(age);
+
+        alert("To calculate your BMI; " + username +"  we need to know your hight and wigth 😃")
+
+        let _hight= prompt("How much your hight? add your hight in CM for please  " + username  +" !")
+        let _wight= prompt("How much do you weigh? add your hight in KG for please  " + username +" !")
+
+        alert( "Dear  " + username + " , your hight is " + _hight + " and your wight is "+ _wight)
+
+        console.log("hight is "+_hight +" and "+"wight is "+ _wight)
+
+          Hight =_hight/100
+          console.log(Hight)
+
+          Hight =Hight*Hight
+          console.log(Hight)
+
+          let BMI= (_wight/Hight)
+           console.log(BMI)
+
+          alert(username +"You old are " + age + " and Your BMI is:  " + BMI )
+
+          let sms1="You have normal wight, Excelent 😎"
+          let sms2="You are underweight, you should gain more wight to have a healthy body 🤕 "
+          let sms3="You are overweight, you should loss more wight to have a healthy body 🤕 "
+          let sms4="You are obese, you should plan with a nutrition specialist to lose weight because your health is in danger 🤕"
+          
+
+          if (BMI< 18.5) 
+          {
+              alert(sms2)
+              printall()
+              document.write(sms1)
+          }
+          else if (18.5 <= BMI < 25)
+          {
+              alert(sms1)
+              printall()
+              document.write(sms2)
+          }
+          else if (25<= BMI<30)
+          {
+              alert(sms3)
+              printall()
+              document.write(sms2)
+          }
+          else if (BMI =>30 )
+          {
+              alert(sms4)
+              printall()
+              document.write(sms3)
+          }
+          else
+          {
+              alert( username +"  Add your correct hight and wigh, for please !!")
+          }
+        
+     
+          let x= document.getElementById("print")
+          x.w
+          function printall() {
+              document.write(username + "<br>");
+              document.write(age + "  years old"+ "<br>");
+              document.write(_hight + "  CM"+ "<br>");
+              document.write(_wight + "  KG"+ "<br>");
+              document.write(BMI + " BMI"+ "<br>");
+          }
+
+    </script> 
+
+
+
+  </main>
+
+
+  <footer>
+    <ul>
+       <li>&#169; AWR Institution</li>
+       <li><b>Resorces:</b>
+           <ul>
+               <li><a href="https://en.wikipedia.org/wiki/Body_mass_index">Wikipedia</a>  </li>
+           </ul>
+    
+       </li>
+  </footer>
+</body>
+</html>
